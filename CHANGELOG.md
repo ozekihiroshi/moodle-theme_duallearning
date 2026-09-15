@@ -2,6 +2,7 @@
 
 ## 0.1.0-alpha3 - 2026-09-15
 
+- Add the required theme configuration title and a 500 by 400 theme-selector screenshot.
 - Replace the `:where()` focus selector with an equivalent expanded selector list for Moodle's bundled SCSS compiler.
 - Align PHP boilerplate with the current Moodle coding standard and include the full GPL v3 licence text.
 - Add independent Moodle 5.2 install and Moodle Plugin CI release checks.

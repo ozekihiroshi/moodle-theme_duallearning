@@ -31,7 +31,7 @@ $THEME->editor_sheets = [];
 $THEME->enable_dock = false;
 $THEME->yuicssmodules = [];
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
-$THEME->scss = function($theme) {
+$THEME->scss = function ($theme) {
     return theme_duallearning_get_main_scss_content($theme);
 };
 $THEME->usefallback = true;

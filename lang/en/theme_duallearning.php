@@ -22,7 +22,7 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['configtitle'] = 'Dual Learning';
 $string['choosereadme'] = 'A lightweight, content-first Boost child theme designed for guided and self-paced learning.';
+$string['configtitle'] = 'Dual Learning';
 $string['pluginname'] = 'Dual Learning';
 $string['privacy:metadata'] = 'The Dual Learning theme does not store personal data.';
