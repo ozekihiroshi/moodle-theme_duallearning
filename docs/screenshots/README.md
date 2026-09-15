@@ -2,9 +2,8 @@
 
 These images show representative pages with the Dual Learning theme selected.
 
-- 01-guided-course-narrow.png: Japanese teacher-guided course overview at 320 CSS pixels.
-- 02-lesson-content-narrow.png: Japanese LessonMark learning content at 320 CSS pixels.
-- 03-self-paced-english-narrow.png: English self-paced course overview at 320 CSS pixels.
-- ../../pix/screenshot.png: 500 by 400 theme-selector preview.
+- `04-learning-workspace-desktop.png`: Japanese LessonMark learning workspace on a desktop display.
+- `05-learning-content-narrow.png`: The same learning resource on a narrow display.
+- `../../pix/screenshot.png`: 500 by 400 theme-selector preview showing the updated visual system.
 
 The source course content is part of the public Dual Learning demonstration material. Browser chrome, account names, and notification controls are excluded.

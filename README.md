@@ -7,16 +7,18 @@ The theme is independent of the optional [format_duallearning](https://github.co
 ## Features
 
 - Inherits Moodle's standard Boost layouts and navigation.
+- Adds a calm teal visual system, balanced spacing, and clear content surfaces.
 - Gives keyboard focus a consistent visible outline.
 - Keeps images, video, iframes, and code blocks usable on narrow screens.
-- Adds no JavaScript, external font, CDN request, renderer override, or settings page.
+- Adds a restrained reading typography layer for LessonMark, Page, and Book resources.
+- Uses local system fonts and adds no JavaScript, font download, CDN request, renderer override, or settings page.
 - Stores no personal data and sends no data to an external service.
 
 ## Screenshots
 
-| Guided course at 320px | Lesson content at 320px | English self-paced course at 320px |
-|---|---|---|
-| ![Guided course](docs/screenshots/01-guided-course-narrow.png) | ![Lesson content](docs/screenshots/02-lesson-content-narrow.png) | ![English self-paced course](docs/screenshots/03-self-paced-english-narrow.png) |
+| Learning workspace | Narrow learning content |
+|---|---|
+| ![Learning workspace](docs/screenshots/04-learning-workspace-desktop.png) | ![Narrow learning content](docs/screenshots/05-learning-content-narrow.png) |
 
 The screenshots use the public Dual Learning demonstration course and were captured with this theme selected. Browser chrome, account names, and notification controls are excluded.
 

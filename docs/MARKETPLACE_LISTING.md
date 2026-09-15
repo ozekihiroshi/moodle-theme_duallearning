@@ -10,13 +10,15 @@ theme_duallearning
 
 ## Short description
 
-Dual Learning is a lightweight Boost child theme that improves keyboard focus visibility and keeps learning content usable on narrow screens without changing Moodle's standard navigation.
+Dual Learning is a polished, lightweight Boost child theme for comfortable learning, clear keyboard focus, and dependable narrow-screen use.
 
 ## Full description
 
-Dual Learning supports courses that combine teacher-guided sessions and self-paced study. It keeps Moodle's familiar Boost layouts, navigation, course index, activity controls, submission pages, and grade reports. Its small presentation layer gives keyboard focus a consistent visible outline and constrains common learning media and code blocks so that course content remains available on narrow screens.
+Dual Learning gives Moodle a calm, coherent learning-workspace appearance while keeping its familiar Boost layouts, navigation, course index, activity controls, submission pages, and grade reports. A restrained teal visual system, balanced spacing, clear content surfaces, and a local system-font stack help both students and teachers experience the site as a considered learning product.
 
-The theme does not introduce JavaScript, external fonts, CDN requests, custom renderers, data tables, external services, or tracking. It can be used with Moodle's standard course formats and does not require the Dual Learning course-format plugin.
+The theme supports teacher-guided sessions and self-paced study. It gives keyboard focus a consistent visible outline, constrains common learning media and code blocks on narrow screens, and improves long-form typography in LessonMark, Page, and Book resources.
+
+The theme does not introduce JavaScript, downloaded fonts, CDN requests, custom renderers, external services, or tracking. It can be used with Moodle's standard course formats and does not require the Dual Learning course-format plugin.
 
 ## Installation
 
@@ -42,5 +44,5 @@ Dual Learning does not store personal data. The package implements Moodle's Priv
 
 - Source control: https://github.com/ozekihiroshi/moodle-theme_duallearning.git
 - Branch: main
-- Release tag: v0.1.0-alpha3
+- Release tag: v0.1.0-alpha4
 - Bug tracker: https://github.com/ozekihiroshi/moodle-theme_duallearning/issues

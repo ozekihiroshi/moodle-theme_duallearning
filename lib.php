@@ -23,7 +23,7 @@
  */
 
 /**
- * Return the Boost preset followed by the small Dual Learning layer.
+ * Return the Dual Learning variables, Boost preset, and presentation layer.
  *
  * @param theme_config $theme Theme configuration.
  * @return string
@@ -31,7 +31,8 @@
 function theme_duallearning_get_main_scss_content($theme): string {
     global $CFG;
 
-    $scss = file_get_contents($CFG->dirroot . '/theme/boost/scss/preset/default.scss');
+    $scss = file_get_contents($CFG->dirroot . '/theme/' . $theme->name . '/scss/pre.scss');
+    $scss .= file_get_contents($CFG->dirroot . '/theme/boost/scss/preset/default.scss');
     $scss .= file_get_contents($CFG->dirroot . '/theme/' . $theme->name . '/scss/duallearning.scss');
     return $scss;
 }

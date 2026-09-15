@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha4 - 2026-09-15
+
+- Add a calm teal visual system, a light learning-workspace background, and a clear content surface while retaining Boost layouts and controls.
+- Use a local system-font stack and improved spacing for Japanese and English interfaces without downloading fonts.
+- Improve long-form readability in LessonMark, Page, and Book resources, including code and wide tables.
+- Keep narrow-screen layouts compact and reduce heading sizes on very small displays.
+- Replace the theme-selector and documentation screenshots with representative images of the updated theme.
+
 ## 0.1.0-alpha3 - 2026-09-15
 
 - Add the required theme configuration title and a 500 by 400 theme-selector screenshot.

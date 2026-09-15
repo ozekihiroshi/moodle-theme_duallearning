@@ -19,6 +19,7 @@ REQUIRED = {
     "duallearning/lib.php",
     "duallearning/pix/screenshot.png",
     "duallearning/scss/duallearning.scss",
+    "duallearning/scss/pre.scss",
     "duallearning/version.php",
 }
 
