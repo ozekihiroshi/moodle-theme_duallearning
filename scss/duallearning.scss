@@ -1,0 +1,29 @@
+// Keep focus visible even where surrounding content is visually dense.
+body a:focus-visible:focus,
+body button:focus-visible:focus,
+body input:focus-visible:focus,
+body select:focus-visible:focus,
+body textarea:focus-visible:focus,
+body [tabindex]:focus-visible:focus {
+    outline: 3px solid #0b57d0;
+    outline-offset: 2px;
+}
+
+// Learning content must remain available on narrow screens.
+#region-main {
+    img,
+    video,
+    iframe {
+        max-width: 100%;
+    }
+
+    img,
+    video {
+        height: auto;
+    }
+
+    pre {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+}
