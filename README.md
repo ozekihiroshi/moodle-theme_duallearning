@@ -9,8 +9,10 @@ The theme is independent of the optional [format_duallearning](https://github.co
 - Inherits Moodle's standard Boost layouts and navigation.
 - Adds a calm teal visual system, balanced spacing, and clear content surfaces.
 - Gives keyboard focus a consistent visible outline.
-- Keeps images, video, iframes, and code blocks usable on narrow screens.
+- Keeps images, video, iframes, code blocks, wide tables, and diagrams usable on narrow screens.
 - Adds a restrained reading typography layer for LessonMark, Page, and Book resources.
+- Gives LessonMark presentation mode a wide teaching surface while keeping ordinary lesson pages comfortable to read.
+- Gives the standard dashboard clearer card grouping without replacing Boost components.
 - Uses local system fonts and adds no JavaScript, font download, CDN request, renderer override, or settings page.
 - Stores no personal data and sends no data to an external service.
 
@@ -27,6 +29,8 @@ The screenshots use the public Dual Learning demonstration course and were captu
 Install the release ZIP through **Site administration > Plugins > Install plugins**, or extract its single duallearning directory into Moodle's theme directory. Complete Moodle's standard plugin upgrade, then select **Dual Learning** through the theme selector.
 
 No Composer, npm, or post-install build step is required.
+
+Wide Mermaid diagrams in LessonMark and wide tables scroll within their own content region. In Page or Book, an author can preserve an unusually wide image by wrapping it in `<div class="duallearning-scrollable">...</div>` in the HTML editor. Ordinary images remain responsive.
 
 ## Compatibility
 

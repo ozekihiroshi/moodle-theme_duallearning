@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha5 - 2026-09-16
+
+- Refine dashboard cards and headings so the standard Moodle dashboard matches the learning workspace.
+- Widen long-form content, add balanced inline padding, and improve code-block contrast without adding another accent colour.
+- Keep wide tables and diagrams readable with local horizontal scrolling instead of compressing their contents.
+- Let LessonMark presentation slides use a wide teaching surface while ordinary lessons retain a comfortable reading measure.
+- Reduce the presentation-canvas focus frame while retaining clear keyboard focus on interactive controls.
+
 ## 0.1.0-alpha4 - 2026-09-15
 
 - Add a calm teal visual system, a light learning-workspace background, and a clear content surface while retaining Boost layouts and controls.

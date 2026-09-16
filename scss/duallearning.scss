@@ -1,11 +1,11 @@
-// Keep focus visible even where surrounding content is visually dense.
+// Keep focus visible and consistent with the theme palette.
 body a:focus-visible:focus,
 body button:focus-visible:focus,
 body input:focus-visible:focus,
 body select:focus-visible:focus,
 body textarea:focus-visible:focus,
 body [tabindex]:focus-visible:focus {
-    outline: 3px solid #0b57d0;
+    outline: 2px solid #0b6f75;
     outline-offset: 2px;
 }
 
@@ -49,6 +49,36 @@ body [tabindex]:focus-visible:focus {
     border-radius: 0.875rem;
 }
 
+// Give the standard dashboard the same visual hierarchy as learning pages.
+.path-my .block {
+    overflow: hidden;
+    border: 1px solid rgba(11, 111, 117, 0.16);
+    border-radius: 0.875rem;
+    background: #fff;
+    box-shadow: 0 0.2rem 0.8rem rgba(24, 52, 58, 0.06);
+}
+
+.path-my .block .card-body {
+    padding: clamp(1rem, 2vw, 1.35rem);
+}
+
+.path-my .block .card-title,
+.path-my .block .card-title h3 {
+    color: #21464b;
+    font-weight: 650;
+}
+
+.path-my .dashboard-card {
+    border-color: #d6e3e3;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.125rem 0.45rem rgba(24, 52, 58, 0.05);
+}
+
+.path-my .dashboard-card:hover {
+    border-color: rgba(11, 111, 117, 0.35);
+    box-shadow: 0 0.25rem 0.75rem rgba(24, 52, 58, 0.09);
+}
+
 // Learning content must remain available on narrow screens.
 #region-main {
     img,
@@ -69,13 +99,17 @@ body [tabindex]:focus-visible:focus {
 }
 
 // Keep long-form learning content comfortable without changing administration,
-// grading, dashboards, or course editing screens.
+// grading, or course editing screens.
 .path-mod-lessonmark .mod_lessonmark-content,
 .path-mod-page #region-main .box.generalbox,
 .path-mod-book #region-main .book_content {
-    max-width: 76ch;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 84ch;
     margin-right: auto;
     margin-left: auto;
+    padding-right: clamp(0.75rem, 2.25vw, 1.5rem);
+    padding-left: clamp(0.75rem, 2.25vw, 1.5rem);
     font-size: 1.025rem;
     line-height: 1.75;
     letter-spacing: 0.01em;
@@ -113,18 +147,141 @@ body [tabindex]:focus-visible:focus {
             "Liberation Mono", monospace;
     }
 
-    pre {
-        padding: 1rem;
-        border: 1px solid #d4e1e2;
-        border-radius: 0.625rem;
-        background: #f6f9f9;
+    :not(pre) > code {
+        border-color: #cadbdb;
+        background: #edf3f4;
+        color: #24464b;
     }
 
-    table {
-        display: block;
-        max-width: 100%;
-        overflow-x: auto;
+    pre {
+        padding: 1rem 1.1rem;
+        border: 1px solid #c8dada;
+        border-radius: 0.625rem;
+        background: #edf3f4;
+        box-shadow: inset 0.2rem 0 0 rgba(11, 111, 117, 0.42);
     }
+
+}
+
+// Page and Book do not add a table wrapper. LessonMark does, so retain its
+// semantic table layout and place overflow on the wrapper it supplies.
+.path-mod-page #region-main .box.generalbox table,
+.path-mod-book #region-main .book_content table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    scrollbar-gutter: stable;
+}
+
+.path-mod-lessonmark .mod_lessonmark-content .mod_lessonmark-table-scroll {
+    max-width: 100%;
+    overflow-x: auto;
+    scrollbar-gutter: stable;
+}
+
+.path-mod-lessonmark .mod_lessonmark-content .mod_lessonmark-table th,
+.path-mod-page #region-main .box.generalbox table th,
+.path-mod-book #region-main .book_content table th {
+    white-space: nowrap;
+}
+
+// Preserve labels in wide diagrams instead of shrinking them until they are
+// unreadable. Mermaid already provides a figure wrapper, while authors can use
+// .duallearning-scrollable around an unusually wide image in Page or Book.
+.path-mod-lessonmark .mod_lessonmark-content .ozmd-mermaid,
+.path-mod-page #region-main .duallearning-scrollable,
+.path-mod-book #region-main .duallearning-scrollable {
+    max-width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scrollbar-gutter: stable;
+}
+
+.path-mod-lessonmark .mod_lessonmark-content .ozmd-mermaid svg {
+    width: 58rem;
+    min-width: 100%;
+    max-width: none;
+    height: auto;
+}
+
+.path-mod-page #region-main .duallearning-scrollable > img,
+.path-mod-book #region-main .duallearning-scrollable > img {
+    width: auto;
+    max-width: none;
+}
+
+// LessonMark uses a classed pre element, so match it explicitly after its own CSS.
+.path-mod-lessonmark .mod_lessonmark-content .mod_lessonmark-code {
+    border-color: #c8dada;
+    background: #edf3f4;
+    color: #24464b;
+    box-shadow: inset 0.2rem 0 0 rgba(11, 111, 117, 0.42);
+}
+
+// Presentation is a wide teaching surface rather than a reading column. Keep
+// the same palette and surface treatment, but let the active slide use the PC
+// display and reserve the narrow measure for the ordinary lesson view.
+body.pagelayout-embedded.path-mod-lessonmark #page.drawers .main-inner {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+body.pagelayout-embedded.path-mod-lessonmark #region-main {
+    padding: 0;
+}
+
+body.pagelayout-embedded.path-mod-lessonmark .mod_lessonmark-presentation {
+    box-sizing: border-box;
+    padding: clamp(0.75rem, 1.75vw, 1.5rem);
+    background: #f3f7f7;
+}
+
+body.pagelayout-embedded.path-mod-lessonmark .mod_lessonmark-presentation-controls,
+body.pagelayout-embedded.path-mod-lessonmark .mod_lessonmark-presentation .mod_lessonmark-content {
+    width: 100%;
+    max-width: 96rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body.pagelayout-embedded.path-mod-lessonmark .mod_lessonmark-presentation .mod_lessonmark-content {
+    padding: 0;
+}
+
+body.pagelayout-embedded.path-mod-lessonmark .mod_lessonmark-presentation .mod_lessonmark-slide {
+    box-sizing: border-box;
+    min-height: calc(100vh - 7rem);
+    padding: clamp(1.25rem, 3vw, 3rem);
+    border: 1px solid rgba(11, 111, 117, 0.16);
+    border-radius: 0.875rem;
+    background: #fff;
+    box-shadow: 0 0.25rem 1rem rgba(24, 52, 58, 0.07);
+}
+
+body.pagelayout-embedded.path-mod-lessonmark .mod_lessonmark-presentation-framed {
+    padding: 0.5rem;
+}
+
+body.pagelayout-embedded.path-mod-lessonmark .mod_lessonmark-presentation-framed .mod_lessonmark-content {
+    max-width: none;
+}
+
+body.pagelayout-embedded.path-mod-lessonmark .mod_lessonmark-presentation-framed .mod_lessonmark-slide {
+    min-height: calc(100vh - 1rem);
+    max-height: calc(100vh - 1rem);
+}
+
+// Keep the presentation canvas quiet after focus moves into it. Interactive
+// controls retain the standard two-pixel focus indicator above.
+body .mod_lessonmark-presentation .mod_lessonmark-slide:focus,
+body .mod_lessonmark-presentation .mod_lessonmark-slide:focus-visible:focus {
+    outline: 1px solid rgba(11, 111, 117, 0.28);
+    outline-offset: -1px;
+    box-shadow: none;
 }
 
 @media (max-width: 767.98px) {
@@ -149,6 +306,8 @@ body [tabindex]:focus-visible:focus {
     .path-mod-lessonmark .mod_lessonmark-content,
     .path-mod-page #region-main .box.generalbox,
     .path-mod-book #region-main .book_content {
+        padding-right: 0.65rem;
+        padding-left: 0.65rem;
         font-size: 1rem;
         line-height: 1.7;
     }
