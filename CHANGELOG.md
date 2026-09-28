@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Reduce nested padding on small LessonMark, Page, and Book screens and wrap long reading content and titles.
+- Provide visible keyboard focus for disclosure summaries and larger mobile activity controls.
+- Keep heading anchors clear of the fixed navigation bar.
+
 ## 0.1.0-alpha5 - 2026-09-16
 
 - Refine dashboard cards and headings so the standard Moodle dashboard matches the learning workspace.

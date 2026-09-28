@@ -20,6 +20,14 @@ No external service, API key, Composer step, npm step, scheduled task, database 
 - Open LessonMark presentation mode on a desktop display. The slide should use a wide teaching surface while the ordinary lesson view retains its reading measure.
 - Switch back to Boost through the normal theme selector. The theme stores no course or user data.
 
+## Mobile reading review
+
+- At 320, 390, and 430 CSS pixels, read LessonMark, Page, and Book content. Check long titles, links, tables, code, and diagrams for page-wide overflow.
+- With the updated LessonMark plugin, open Contents and Presentation options using both touch and Enter/Space. Both start collapsed on desktop and mobile; heading links and presentation modes remain available.
+- With the updated Dual Learning format, check previous activity, activity selector, and next activity in reading and keyboard order. They stack on small screens and retain three columns on desktop.
+- Check Boost drawers, completion controls, browser zoom, and landscape orientation. The theme retains Boost's drawer positioning.
+- Confirm print preview excludes presentation options and that desktop presentation mode remains full width.
+
 ## Privacy and dependencies
 
 The theme implements Moodle's Privacy API null provider. It depends only on the Boost theme included with Moodle and sends no data to an external service.

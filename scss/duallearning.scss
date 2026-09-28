@@ -4,6 +4,7 @@ body button:focus-visible:focus,
 body input:focus-visible:focus,
 body select:focus-visible:focus,
 body textarea:focus-visible:focus,
+body summary:focus-visible:focus,
 body [tabindex]:focus-visible:focus {
     outline: 2px solid #0b6f75;
     outline-offset: 2px;
@@ -113,6 +114,12 @@ body [tabindex]:focus-visible:focus {
     font-size: 1.025rem;
     line-height: 1.75;
     letter-spacing: 0.01em;
+    overflow-wrap: anywhere;
+
+    // Anchor destinations should clear Boost's fixed navigation bar.
+    [id] {
+        scroll-margin-top: 6rem;
+    }
 
     h1,
     h2,
@@ -306,9 +313,82 @@ body .mod_lessonmark-presentation .mod_lessonmark-slide:focus-visible:focus {
     .path-mod-lessonmark .mod_lessonmark-content,
     .path-mod-page #region-main .box.generalbox,
     .path-mod-book #region-main .book_content {
-        padding-right: 0.65rem;
-        padding-left: 0.65rem;
+        padding-right: 0;
+        padding-left: 0;
         font-size: 1rem;
         line-height: 1.7;
+    }
+
+    // Reserve the narrow reading width for content, not nested surface padding.
+    .path-mod-lessonmark:not(.pagelayout-embedded),
+    .path-mod-page,
+    .path-mod-book {
+        #page.drawers .main-inner {
+            padding: 1rem;
+        }
+
+        #page-header {
+            padding-right: 0;
+            padding-left: 0;
+            margin-bottom: 0.75rem;
+        }
+
+        #region-main,
+        #page-content {
+            min-width: 0;
+        }
+
+        #page-header h1 {
+            overflow-wrap: anywhere;
+        }
+
+        #page-header > .w-100 > .d-flex.align-items-center {
+            flex-wrap: wrap;
+        }
+
+        #page-header > .w-100 > .d-flex.align-items-center > .me-auto {
+            width: 100%;
+        }
+
+        #page-header .header-actions-container {
+            width: 100%;
+            margin-top: 0.5rem;
+        }
+
+        #page-header .header-actions-container .btn {
+            min-height: 44px;
+        }
+
+        .activity-navigation .btn,
+        .activity-navigation select,
+        .duallearning-activity-navigation .btn,
+        .duallearning-activity-navigation select,
+        .activity-information .btn {
+            min-height: 44px;
+            max-width: 100%;
+            white-space: normal;
+            overflow-wrap: anywhere;
+        }
+    }
+
+    .path-mod-lessonmark .mod_lessonmark-toc {
+        margin-bottom: 1rem;
+        padding: 0.25rem 0.75rem;
+    }
+
+    // Boost already supplies the activity title in the page header. Keep the
+    // fallback heading for layouts without it, and leave authored headings alone.
+    .path-mod-lessonmark #page:has(#page-header h1) #region-main > h2:first-of-type {
+        display: none;
+    }
+
+    .path-mod-lessonmark .mod_lessonmark-toc__list a {
+        display: inline-block;
+        padding-block: 0.5rem;
+    }
+
+    .path-mod-lessonmark .mod_lessonmark-reading-tools .btn {
+        min-height: 44px;
+        margin: 0;
     }
 }
