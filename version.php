@@ -25,7 +25,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'theme_duallearning';
-$plugin->version = 2026092900;
+$plugin->version = 2026092901;
 $plugin->requires = 2026042000;
 $plugin->dependencies = [
     'theme_boost' => ANY_VERSION,

@@ -292,6 +292,47 @@ body .mod_lessonmark-presentation .mod_lessonmark-slide:focus-visible:focus {
 }
 
 @media (max-width: 767.98px) {
+    // Standard course formats also use this navigation. Give each control its
+    // own row so a long jump-menu option cannot squeeze its neighbours.
+    .path-course-view .section-navigation {
+        flex-direction: column;
+        gap: 0.5rem;
+
+        > div {
+            width: 100%;
+            min-width: 0;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            min-height: 44px;
+            overflow-wrap: anywhere;
+        }
+
+        .nextsection a {
+            justify-content: flex-end;
+        }
+
+        .jumpmenu,
+        form,
+        select {
+            width: 100%;
+            min-width: 0;
+            max-width: 100%;
+        }
+
+        select {
+            min-height: 44px;
+        }
+    }
+
+    // Standalone lesson images can use the reading surface's side gutters.
+    // Keep prose padded, small images at their natural size, and slides intact.
+    .path-mod-lessonmark:not(.pagelayout-embedded) .mod_lessonmark-content > p:has(> img:only-child) {
+        margin-inline: -1rem;
+    }
+
     #page.drawers .main-inner {
         border-right: 0;
         border-left: 0;

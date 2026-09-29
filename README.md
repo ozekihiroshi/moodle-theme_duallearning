@@ -10,6 +10,7 @@ The theme is independent of the optional [format_duallearning](https://github.co
 - Adds a calm teal visual system, balanced spacing, and clear content surfaces.
 - Gives keyboard focus a consistent visible outline.
 - Keeps images, video, iframes, code blocks, wide tables, and diagrams usable on narrow screens.
+- Stacks standard section navigation on phones and gives standalone LessonMark images the full reading surface width.
 - Adds a restrained reading typography layer for LessonMark, Page, and Book resources.
 - Gives LessonMark presentation mode a wide teaching surface while keeping ordinary lesson pages comfortable to read.
 - Gives the standard dashboard clearer card grouping without replacing Boost components.

@@ -2,6 +2,8 @@
 
 ## 0.1.0-alpha6 - 2026-09-29
 
+- Stack standard section navigation on phones to prevent long jump-menu options squeezing adjacent links.
+- Let standalone LessonMark images use the full mobile reading surface while retaining prose padding and natural small-image sizes.
 - Reduce nested padding on small LessonMark, Page, and Book screens and wrap long reading content and titles.
 - Provide visible keyboard focus for disclosure summaries and larger mobile activity controls.
 - Keep heading anchors clear of the fixed navigation bar.
