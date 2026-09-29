@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.1.0-alpha6 - 2026-09-29
 
 - Reduce nested padding on small LessonMark, Page, and Book screens and wrap long reading content and titles.
 - Provide visible keyboard focus for disclosure summaries and larger mobile activity controls.
