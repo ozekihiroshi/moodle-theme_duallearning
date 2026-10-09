@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.0-alpha7 - 2026-10-10
+
+- Explicitly configure Boost's navigation and block settings, which are not inherited by child themes (review issue #1).
+- Restore the navigation edit switch and block-drawer add control, avoid forcing Navigation and Administration blocks, and use the course index and Boost activity-title behaviour.
+
 ## 0.1.0-alpha6 - 2026-09-29
 
 - Stack standard section navigation on phones to prevent long jump-menu options squeezing adjacent links.

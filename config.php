@@ -35,3 +35,10 @@ $THEME->scss = function ($theme) {
     return theme_duallearning_get_main_scss_content($theme);
 };
 $THEME->usefallback = true;
+
+// These settings are not inherited from Boost; keep its navigation and block behaviour.
+$THEME->requiredblocks = '';
+$THEME->addblockposition = BLOCK_ADDBLOCK_POSITION_FLATNAV;
+$THEME->haseditswitch = true;
+$THEME->usescourseindex = true;
+$THEME->activityheaderconfig = ['notitle' => true];
