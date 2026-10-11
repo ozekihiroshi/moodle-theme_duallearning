@@ -1,8 +1,30 @@
 # Dual Learning theme
 
-Dual Learning is a lightweight, content-first child theme for Moodle. It keeps Boost navigation and layouts while improving the readability and keyboard visibility needed by guided and self-paced courses.
+Give learning content room to read. Dual Learning is a Boost-based Moodle
+theme for site administrators and teachers who want a calm visual environment
+for text-rich lessons, classroom teaching, and independent study.
 
-The theme is independent of the optional [format_duallearning](https://github.com/ozekihiroshi/moodle-format_duallearning) course format and also works with Moodle's standard course formats.
+Keep familiar Moodle controls. Teal accents, balanced spacing, visible keyboard
+focus, and responsive content surfaces refine the presentation while retaining
+Boost layouts and navigation. The theme uses local system fonts and adds no
+JavaScript, external font downloads, or CDN requests.
+
+## Get the theme
+
+Dual Learning is published on [Moodle Marketplace](https://marketplace.moodle.com/plugins/theme_duallearning).
+Download the installable package there, or choose an attached ZIP from
+[GitHub Releases](https://github.com/ozekihiroshi/moodle-theme_duallearning/releases).
+The documented release is [0.1.0-alpha7](https://github.com/ozekihiroshi/moodle-theme_duallearning/releases/tag/v0.1.0-alpha7),
+an alpha for evaluation on Moodle 5.2.
+
+Try it with an existing course. Install the theme, select **Dual Learning**,
+and review a lesson, a wide table, and the course navigation on desktop and
+mobile. No content conversion or post-install build step is required.
+
+Use it independently. Standard Moodle course formats work with this theme.
+Optional styling also complements [LessonMark](https://github.com/ozekihiroshi/moodle-mod_lessonmark)
+reading and presentation views and the [Dual Learning course format](https://github.com/ozekihiroshi/moodle-format_duallearning).
+Neither plugin is required; Moodle's core Boost theme is the parent.
 
 ## Features
 
@@ -35,7 +57,7 @@ Wide Mermaid diagrams in LessonMark and wide tables scroll within their own cont
 
 ## Compatibility
 
-The declared target is Moodle 5.2. The release candidate has been checked with PHP 8.3 and PHP 8.4 in CI and installed independently with MariaDB 11.8.
+The declared target is Moodle 5.2. The alpha7 release has been checked with PHP 8.3 and PHP 8.4 in CI and installed independently with MariaDB 11.8.
 
 ## Privacy
 
