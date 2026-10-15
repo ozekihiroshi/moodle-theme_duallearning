@@ -63,6 +63,14 @@ The declared target is Moodle 5.2. The alpha7 release has been checked with PHP 
 
 Dual Learning implements Moodle's Privacy API null provider. It stores no additional personal data.
 
+## Development principles
+
+Follow the shared development principles ([English](docs/DEVELOPMENT_PRINCIPLES.md) /
+[日本語](docs/DEVELOPMENT_PRINCIPLES.ja.md)) when changing this theme.
+LessonMark, the Dual Learning course format, and this
+theme remain independently usable. Changes should have a clear responsibility,
+provide optional cooperation, and verify the combinations they affect.
+
 ## Licence
 
 Copyright 2026 Hiroshi Ozeki.

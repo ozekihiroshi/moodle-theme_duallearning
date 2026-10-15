@@ -25,10 +25,10 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'theme_duallearning';
-$plugin->version = 2026101000;
+$plugin->version = 2026101500;
 $plugin->requires = 2026042000;
 $plugin->dependencies = [
     'theme_boost' => ANY_VERSION,
 ];
 $plugin->maturity = MATURITY_ALPHA;
-$plugin->release = '0.1.0-alpha7';
+$plugin->release = '0.1.0-alpha8';

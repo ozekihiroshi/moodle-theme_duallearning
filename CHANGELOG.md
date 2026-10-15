@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.0-alpha8 - 2026-10-15
+
+- Refine unit-guide spacing, heading hierarchy and content surfaces while preserving the Course Format's structure and standard Moodle controls.
+- Distinguish the next-learning action, expandable submission details, status text and supporting explanations without adding instructions.
+- Underline activity links, retain visible keyboard focus, and allow long labels to wrap in comfortably sized action controls.
+- Validate the theme with Topics and Dual Learning, including long Python lessons and LessonMark integration. The theme remains optional.
+
 ## 0.1.0-alpha7 - 2026-10-10
 
 - Explicitly configure Boost's navigation and block settings, which are not inherited by child themes (review issue #1).

@@ -48,6 +48,147 @@ body [tabindex]:focus-visible:focus {
 .path-course-view .course-section {
     border-color: rgba(11, 111, 117, 0.18);
     border-radius: 0.875rem;
+    background: #fff;
+}
+
+// Distinguish the optional authoring workspace without changing its workflow.
+#page-course-format-duallearning-unit #region-main {
+    max-width: 64rem;
+    margin-inline: auto;
+
+    > h2 {
+        margin-bottom: 1.25rem;
+        font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+        line-height: 1.4;
+        overflow-wrap: anywhere;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+        line-height: 1.4;
+    }
+
+    [data-region="unit-guide"] {
+        background: #fff;
+        border-inline-start: 0.25rem solid #0b6f75 !important;
+    }
+
+    #guide-existing,
+    #guide-add,
+    #guide-review {
+        scroll-margin-top: 6rem;
+    }
+
+    > h3 {
+        margin-top: 2rem;
+    }
+
+    details.border {
+        background: #fff;
+    }
+
+    summary {
+        min-height: 44px;
+        padding-block: 0.5rem;
+        cursor: pointer;
+        overflow-wrap: anywhere;
+    }
+
+    summary:hover {
+        text-decoration: underline;
+        text-underline-offset: 0.18em;
+    }
+
+    details[open] > summary {
+        margin-bottom: 0.75rem;
+    }
+
+    .btn {
+        min-height: 44px;
+        max-width: 100%;
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+}
+
+// Keep the learner's current-work summary a quiet, distinct surface.
+.format-duallearning section[aria-labelledby="dual-learning-heading"] {
+    background: #fff;
+    border-color: #cadbdb;
+
+    h2 {
+        font-size: clamp(1.35rem, 2.5vw, 1.65rem);
+        line-height: 1.4;
+    }
+
+    // Keep explanatory copy readable but distinct from the next action.
+    .card-body > p:has(> strong),
+    .small {
+        color: #52656a;
+        font-size: 0.9375rem;
+        line-height: 1.5;
+    }
+
+    .card-body > p > strong {
+        color: #18343a;
+        font-size: 1rem;
+    }
+
+    .btn {
+        min-height: 44px;
+        max-width: 100%;
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+
+    .btn-primary {
+        padding: 0.75rem 1rem;
+        font-weight: 600;
+    }
+
+    summary {
+        min-height: 44px;
+        padding: 0.75rem;
+        border: 1px solid #cadbdb;
+        border-radius: 0.5rem;
+        background: #f3f7f7;
+        font-size: 1rem;
+        line-height: 1.5;
+        cursor: pointer;
+        overflow-wrap: anywhere;
+    }
+
+    summary:hover {
+        text-decoration: underline;
+        text-underline-offset: 0.18em;
+    }
+
+    details[open] > summary {
+        margin-bottom: 1rem;
+    }
+
+    a:not(.btn) {
+        text-decoration: underline;
+        text-underline-offset: 0.18em;
+    }
+
+    // All submission states use neutral treatment; text carries their meaning.
+    details li > strong {
+        display: inline-block;
+        margin-block: 0.25rem;
+        padding: 0.125rem 0.5rem;
+        border-inline-start: 2px solid #52656a;
+        background: #edf3f4;
+        color: #18343a;
+        font-size: 0.9375rem;
+    }
+}
+
+// Standard activity links retain the same affordance in Topics and Dual Learning.
+.path-course-view .activityname a .instancename {
+    text-decoration: underline;
+    text-decoration-thickness: 0.06em;
+    text-underline-offset: 0.2em;
 }
 
 // Give the standard dashboard the same visual hierarchy as learning pages.
